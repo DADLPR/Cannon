@@ -1,4 +1,6 @@
 """Cannon, hitting targets with projectiles."""
+"Arturo Ordoñez Jarillo"
+"Daniel de la Peña Rosales"
 
 from random import randrange
 from turtle import *
@@ -59,8 +61,9 @@ def move():
 
     for target in targets:
         if not inside(target):
-            return
-
+            y = randrange(-150, 150)
+            target.x = 200
+            target.y = y
     ontimer(move, 25)
 
 setup(420, 420, 370, 0)
