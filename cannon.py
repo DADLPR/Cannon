@@ -1,12 +1,4 @@
-"""Cannon, hitting targets with projectiles.
-
-Exercises
-
-1. Keep score by counting target hits.
-2. Vary the effect of gravity.
-3. Apply gravity to the targets.
-4. Change the speed of the ball.
-"""
+"""Cannon, hitting targets with projectiles."""
 
 from random import randrange
 from turtle import *
@@ -14,7 +6,7 @@ from turtle import *
 from freegames import vector
 
 ball = vector(-200, -200)
-speed = vector(0, 0)
+speed = vector(0,0)
 targets = []
 
 
@@ -58,7 +50,7 @@ def move():
         target.x -= 0.5
 
     if inside(ball):
-        speed.y -= 0.35
+        speed.y -= 0.05
         ball.move(speed)
 
     dupe = targets.copy()
